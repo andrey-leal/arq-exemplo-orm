@@ -9,14 +9,14 @@ public class Postagem extends Publicacao {
 
     private Collection<Comentario> comentarios = new ArrayList<>();
 
-    private Postagem(String texto, String autor) {
-        super(texto, autor);
+    private Postagem(String texto, long autorId) {
+        super(texto, autorId);
     }
 
 
-    public static Postagem criar(String texto, String autor) {
-        if(StringUtils.hasText(texto) && StringUtils.hasText(autor)) {
-            return new Postagem(texto, autor) ;
+    public static Postagem criar(String texto, long autorId) {
+        if(StringUtils.hasText(texto)) {
+            return new Postagem(texto, autorId) ;
         }
         return null;
     }

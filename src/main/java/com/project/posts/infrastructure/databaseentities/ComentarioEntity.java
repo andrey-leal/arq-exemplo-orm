@@ -3,7 +3,7 @@ package com.project.posts.infrastructure.databaseentities;
 import javax.persistence.*;
 
 @Entity
-public class Comentario {
+public class ComentarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,6 +14,5 @@ public class Comentario {
     @ManyToOne
     private PostagemEntity postagemEntity;
 
-    @ManyToOne
-    private AutorEntity autorEntity;
+    private Long autorId;
 }

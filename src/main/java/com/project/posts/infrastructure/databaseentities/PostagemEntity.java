@@ -12,37 +12,9 @@ public class PostagemEntity {
 
     private String texto;
 
-    @ManyToOne
-    private AutorEntity autorEntity;
+    private Long autorId;
 
     @OneToMany(mappedBy = "postagem", cascade = CascadeType.ALL)
-    private List<Comentario> comentarios;
+    private List<ComentarioEntity> comentarios;
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getTexto() {
-        return texto;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-
-    public AutorEntity getAutorEntity() {
-        return autorEntity;
-    }
-
-    public void setAutorEntity(AutorEntity autorEntity) {
-        this.autorEntity = autorEntity;
-    }
-
-    public List<Comentario> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
-    }
 }

@@ -8,7 +8,7 @@ public class PostagemAssembler {
     public PostagemResponse criarPostagemResponse(Postagem postagem) {
         PostagemResponse response = new PostagemResponse();
         response.setTexto(postagem.getTexto());
-        response.setAutor(postagem.getAutor().getNomeCompleto());
+        response.setAutorId(postagem.getAutorId());
         response.setData(postagem.getData());
         return response;
     }

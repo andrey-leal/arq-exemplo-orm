@@ -6,14 +6,14 @@ abstract class Publicacao {
 
     private Long id;
 
-    private Autor autor;
+    private long autorId;
 
     private String texto;
 
     private LocalDateTime data;
 
-    public Publicacao(String texto, Autor autor) {
-        this.autor = autor;
+    public Publicacao(String texto, long autorId) {
+        this.autorId = autorId;
         this.texto = texto;
         data = LocalDateTime.now();
     }
@@ -22,8 +22,8 @@ abstract class Publicacao {
         return id;
     }
 
-    public Autor getAutor() {
-        return autor;
+    public long getAutorId() {
+        return autorId;
     }
 
     public String getTexto() {

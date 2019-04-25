@@ -8,7 +8,7 @@ public class PostagemResponse {
 
     private String texto;
 
-    private String autor;
+    private long autorId;
 
     private LocalDateTime data;
 
@@ -28,12 +28,12 @@ public class PostagemResponse {
         this.texto = texto;
     }
 
-    public String getAutor() {
-        return autor;
+    public long getAutorId() {
+        return autorId;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAutorId(long autorId) {
+        this.autorId = autorId;
     }
 
     public LocalDateTime getData() {

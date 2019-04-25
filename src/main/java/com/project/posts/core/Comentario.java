@@ -7,8 +7,8 @@ class Comentario extends Publicacao {
 
     private List<Comentario> respostas = new ArrayList<>();
 
-    public Comentario(String texto, String autor) {
-        super(texto, autor);
+    public Comentario(String texto, long autorId) {
+        super(texto, autorId);
     }
 
     public void adicionarResposta(Comentario resposta) {

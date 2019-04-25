@@ -8,7 +8,7 @@ public class PostagemServiceImpl implements PostagemService {
 
     @Override
     public void postar(PostagemRequest postagemRequest) {
-        Postagem postagem = Postagem.criar(postagemRequest.getTexto(), postagemRequest.getAutor());
+        Postagem postagem = Postagem.criar(postagemRequest.getTexto(), postagemRequest.getAutorId());
     }
 
     @Override

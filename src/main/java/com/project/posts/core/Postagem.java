@@ -1,5 +1,7 @@
 package com.project.posts.core;
 
+import org.springframework.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -7,8 +9,16 @@ public class Postagem extends Publicacao {
 
     private Collection<Comentario> comentarios = new ArrayList<>();
 
-    public Postagem(String texto, String autor) {
+    private Postagem(String texto, String autor) {
         super(texto, autor);
+    }
+
+
+    public static Postagem criar(String texto, String autor) {
+        if(StringUtils.hasText(texto) && StringUtils.hasText(autor)) {
+            return new Postagem(texto, autor) ;
+        }
+        return null;
     }
 
     public void escreverComentario(Comentario comentario) {
@@ -19,9 +29,7 @@ public class Postagem extends Publicacao {
         comentarios.remove(comentario);
     }
 
-
-
-
-
-
+    public Collection<Comentario> getComentarios() {
+        return comentarios;
+    }
 }

@@ -3,7 +3,7 @@ package com.project.posts.core;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Comentario extends Publicacao {
+class Comentario extends Publicacao {
 
     private List<Comentario> respostas = new ArrayList<>();
 

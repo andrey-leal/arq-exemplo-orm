@@ -12,7 +12,7 @@ public class ComentarioEntity {
     private String texto;
 
     @ManyToOne
-    private PostagemEntity postagemEntity;
+    private PostagemEntity postagem;
 
     private Long autorId;
 }
